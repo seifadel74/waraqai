@@ -7,9 +7,7 @@ import requests
 # import validators
 
 API = "AIzaSyCaPzDUJujNjXa8r2wQ5P0RCHlTMXJc5zE"
-"""
-Summarizing books and documents" (read long texts and summarize them briefly for user, focusing on the most important points and topics), Answering questions: (answer questions about the texts you have on hand), Suggesting books: (suggest books based on users interests), Translating texts: (translate texts from one language to another), and Writing texts: (write various texts, such as articles, reports, or research)
-"""
+
 
 if "messages" not in st.session_state:
     st.session_state.messages = [
@@ -33,14 +31,7 @@ if "messages" not in st.session_state:
     ]
 
 
-"""
-: أقدر أقرأ نصوص طويلة وألخصها لك باختصار، وأركز على أهم النقاط والمواضيع.
-: أقدر أجيب على أسئلة عن النصوص اللي بتبقى موجودة عندي.
-: أقدر أقترح عليك كتب بناءً على اهتماماتك.
-: أقدر أترجم النصوص من لغة لأخرى. (لسه في طور التطوير، لكني بتحسن باستمرار!)
-: أقدر أساعدك في كتابة نصوص مختلفة، زي المقالات أو التقارير. (لسه في طور التطوير، لكني بتحسن باستمرار!)
-بس أهم حاجة عندي هي مساعدتك في فهم وفهم الكتب والمستندات بشكل أسهل وأسرع. قولي إيه اللي محتاجه و هساعدك على قد ما أقدر.
-"""
+
 
 if "chat" not in st.session_state:
     st.session_state.chat = ChatGoogleGenerativeAI(model="gemini-1.5-flash", google_api_key=API, temprature=0)
